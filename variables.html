@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>McDonald Clone</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <section id="navbar">
+      <div class="upper-navbar">
+        <div>
+          <img src="./images/copyright McD logo.jpg" alt="img" />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li>
+              <a href="">Languages</a>
+            </li>
+            <li>
+              <a href="">Sign Up for Email</a>
+            </li>
+            <li>
+              <a href="">Careers</a>
+            </li>
+          </ul>
+          <div class="right-navbar">
+            <ul>
+              <li>
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAEaElEQVR4nO3bSYgcVRzH8c9kEjNZNE5MFDzEJWpMxKgZhShGwQUEFzxE8CJBBS8uoB4kHlwQD4LLzYOIoIJBI0ouiopo0EMk7rlkE5MgatRMTELiZDHt4V9t1Sw1nenqqm6Y/kLzamaa/+///vVe1Xv//xu6dJnU9FSg0Yc5mJX8vC/5HKtAuyFlBGAAN+AaLMECTBnxnSPYjh/wOT7CzhJ8qYx+rMYW1Jr4HMd63IVpVTpedATMEh1/CCeP+NtufIPN+EMM+2mYjbOwCFdIp0adHXgKb4jgdCw3iWGbvZPb8QQuOkEb08RUeRmDI2x9gQta63Jr6MVzYtjWnd2ElUbP9YkwG4/iz4zd/biziLOtpg/vSx08hEcwtYUac/Gq4c+H1S203zTT8YnUsc24uES9lWIE1PWeKVGrIT14J+PMBpxWge4y/J7Rvb8CzTF5LOPE9zi1Qu0l2JNoH8XVFWojXlVHEwd24fSqHcCKET6cUpVwr3iX16N/VVXCY5AdhS9VJXpPRvSFqkRz6MVG6c04vwrBrYngbqNXeu1gufSGvFa22K0ZscfLFpsAHwufDmNemUJrE6EhsTjpFG6W3pgHyhLpE6u8Gt4tS6RJpoopWcNnZYlcJ43yqrJECvC6dHTOKGIob/OyPHO9vohASdTv/HSRgGmavAAsTtr9OjNTsylzvaiIobwAnJO023RmUmJr5vrcIobyAjAnaQeLGC+RAyKvSOprU+QFYGbSHipivGQOJu3sIkbyAjCUtH1FjJdM/SYNjfutBuQF4EDSFhpeJdIn3gCkvjZFXgB2Je3CIsZLJOvXjiKG8gKwOWnna8/+vxHZrPO2IobyAvB15npFEYGSuDZpj4stcsuZI2p3NZGh7SR6RP2hhu/KFPo0Edmrs94GV0r3KU+WKbQqI3RvmUIT5E1pvaDUytFMUdOriaVnK4sfzbJQmhz9oArB1dJR8HAVgg1YJ/WnkvT4LGkBdJ+CG4+C3CHt/LoqhW/PCG+UrsCqZCH+lhZMF1TtwCvSIKxVrAo8UeaJhVld/+4Ktf9nhjQnXxOHF6o4yXEGvs3ovlWBZi7zDT8C86Fys8VL8VNGrybyE4VSYEU5Ez9mHNopEqitZIpId9ez0iM/bQ9Cv7j7WafWaM2i5HrDp1reZ1CUzttGjyhW/pNx6l+8h9tw0gRszcV9+MrwTv6MB40+O9TSIBQ9JXaeqNTeMuL3B/Gl2FVuwW8icTFVpLDOxoWi2jwg6pB1juB5PCumwYA4mdI/hv4gbhQPyrYygLdFeqqZc4I1/IqnxXNmLPt5I2GPNk+HLP1i47RGdGi8Dh8TI+RFUYht9FpdZvwgXNaMw2WfFe4XD8d+UV4/LJz9C79IM7snyjIxHcZ6/e4R06HUHEEncKkI4FgjYS8ub59r1dENgghC9lTppAzCJfKDMKgbhPYvm6uiGwTdIKAbBIwfhA2q+UextrPU6CDsEJuwScNisQudlJ2vs1gM+0nZ+S5dujTmPzpBjw82bDMeAAAAAElFTkSuQmCC"
+                  alt="img"
+                />
+                <a href="">Search</a>
+              </li>
+              <li>
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAEQklEQVRogdWZS2xVVRSGv3UPLUWD1ZERS4Ntzy3RauIjVhN8RCtKEzVEEwcmBrUm+ETUxJoYE40DEwkDE2I0dmAcykAYgElRTBupEgYG0uJ9QIFQGhwYlFAp7T3LwQWK0H3O2uccDf7T9a+1/j973333Xgf+55C8Cmk7SwlYBaxAuQloBa4GFDiBchhhFGWYgO1S4lgefTMb0HYeocDbwL1AwZgWATsRPpIyO7L0T23grPD3gTuzCABGEN5La8TbgLbRTMAm4Ok0DWPwJQVelRInfZK8DGgbIQFbgeVe0uwYI+JxOUDVmmA2oMu5mRqDwLWppNkxCTwoFfZbyCYD2skSIn4GWrIo88AxlG6pcjSJmHhq6O00UGML/514gCUIm/V+FiQRk4+9k7yLcEcusvzQzQTvJJFit5C20UpACWgyt1X2IQyg7OAKDgEwxTKEHqAP6DLXgimEopSZcBHiDRTZhPKSsdk0ynqqfCb1P6pL60FAkbUoG4FGY91PpMI6V9BpQDtZTMQEsNjQZJqIVXKAnRZF2skDRGzHZuIPFnG97OXUfEH3byBiJTbxAK9bxQNIie8R3jTSm5mixxWM+xE/ZCqv7KPC50YxcyjzKTBq4goPu0JxBm41Fv/Ctefj06ihDJjIyi2uUJyBG4zF098mlUETr0C7O+TGVabiCzli4s2HBRw28ZRrXKE4AzVT8dkMb4qaOXfGFYgz8JtRxFKjiEuhtBqZTi1xBmxbQ4ynVZZccW81twHlR6OMPoXAyL2gPAFCn5G8yxVyGygwbNTSRZG1Ru4cQl4GbjRx1a3FfZXoYCEFJuNOgAtwBqFXynxn0lOkB2Ub0GCg/04j18koZ+YLOldAqkwTsdkiCGhE2aZFXonbTgqBhrzmIR7ga5d4SLqNhnQDPxkbncMoygDKIE1nr9OnWUbASpTnsW6bOYXdUma3O5wADRkGVng1zQ9DUuG+OELyi0z5ODc5vlA2JFFsj/qQXcDdmQX5YTcV7pL6aNIJ6yiwPwdBfojoTxIPRgNSYQhhS3ZVRijfWB9I9sFW/YE/BlyZWpgNUxTokhLjFrJ1CyEHOYLyYXpdRigfWMWDhwEAWtgAjPhqMkPZQzMbfVL8p9NF2lB+wf7gt+IUAbfJr5R9kvxWAJAyBxHe8s1LLsx6X/H1tJTQkK3Ao2nzL1LxLWV6LcfmxfBegfOY5QXqo/CsmGSGNWnEQwYDMs5xlCfAfVM0YAbhKRnneNoC6VcAkCojCG+kLqCsk7L54TS/hizJ53WEDADPeXb+Sso8k7V3PgZaWEQTQ+bvCMoeZrlHDnE6a+9MW+gc5Ch/0cBjqGlQNQGszkM85GQAQPYzCfQCJ2Jof1Kg1/Lty4rcDABIlTGU1cx/Ms0AT0qJvXn2zNUAgFT5AXiWf06sI2CNVIzD3MsB2sGLGqIaEmmYYm50OUA76NeOf/c19ze5eiaQp6L/5wAAAABJRU5ErkJggg=="
+                />
+                <a href="">Change Your Location</a>
+              </li>
+              <button class="btn">Order Now</button>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-navbar">
+        <ul>
+          <li>
+            <a href="">Our Menu</a>
+          </li>
+          <li>
+            <a href="">McCafe</a>
+          </li>
+          <li>
+            <a href="">About Our Food</a>
+          </li>
+          <li>
+            <a href="">Exclusive Deals</a>
+          </li>
+          <li>
+            <a href="">Download App</a>
+          </li>
+          <li>
+            <a href="">Locate</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- end navbar -->
+
+    <!-- First product -->
+    <section id="product">
+      <div class="img">
+        <img
+          src="./images/first product img.jpg"
+          width="650px"
+          height="300px"
+          alt="img"
+        />
+      </div>
+      <div class="first-des">
+        <h1>Free Fries Now. Free McDonald’s Later.*</h1>
+        <p class="first-img-first-des">
+          Get free large Fries when you download the McDonald’s app and join
+          MyMcDonald’s Rewards. Get your choice of Hash Browns, Vanilla Cone,
+          McChicken® or a Cheeseburger free after your first purchase.
+        </p>
+        <p class="first-img-sec-des">
+          *Free large Fries valid 1x thru 12/31/21 for first time app users at
+          participating McDonald’s. May take up to 48 hours to appear in your
+          deals. Free Loyalty Reward Points valid 1x thru 12/31/21 for first
+          time MyMcDonald’s Rewards users. Program available only at
+          participating McDonald’s. Excludes delivery. McD app download and
+          registration required.
+        </p>
+
+        <a href="#" class="btn">Download App</a>
+      </div>
+    </section>
+    <!-- End First product -->
+
+    <!-- second product -->
+    <section id="product">
+      <div class="img">
+        <img
+          src="./images/sec image.jpg"
+          width="650px"
+          height="300px"
+          alt="img"
+        />
+      </div>
+      <div class="sec-des">
+        <h1>Order McDelivery® Now*</h1>
+        <p class="sec-img-first-des">
+          Get all your McDonald’s favorites delivered right to your doorstep
+          with McDelivery® on Uber Eats or DoorDash.
+        </p>
+        <p class="sec-img-sec-des">
+          *At participating McDonald’s. Prices may be higher than at
+          restaurants. Delivery/service fees apply
+        </p>
+        <a href="#" class="btn">Order McDelivery®Now</a>
+      </div>
+    </section>
+    <!-- end second product -->
+
+    <!-- third product -->
+    <section id="product">
+      <div class="img">
+        <img
+          src="./images/third image.jpg"
+          width="650px"
+          height="300px"
+          alt="img"
+        />
+      </div>
+      <div class="third-des">
+        <h1>Try the New Crispy Chicken Sandwiches*</h1>
+        <p class="third-img-first-des">
+          Take a bite and you’ll find out what CrispyJuicyTender means. Whether
+          it’s Crispy, Spicy or Deluxe, there’s a new sandwich for everyone.
+        </p>
+        <p class="third-img-sec-des">*At participating McDonald’s</p>
+        <a href="#" class="btn">Order in the App</a>
+      </div>
+    </section>
+    <!-- end third product -->
+
+    <!-- fourth product -->
+    <section id="product">
+      <div class="img">
+        <img
+          src="./images/fourth image.jpg"
+          width="650px"
+          height="300px"
+          alt="img"
+        />
+      </div>
+      <div class="fourth-des">
+        <h1>Delicious Deals for Delicious Meals</h1>
+        <p class="fourth-img-first-des">
+          Get <a href="deals">exclusive deals</a> on your McDonald’s favorites
+          in the app with contactless Mobile Order & Pay* and convenient Drive
+          Thru or Curbside pickup.
+        </p>
+        <p class="fourth-img-sec-des">
+          *Mobile Order & Pay at participating McDonald’s.
+        </p>
+        <a href="#" class="btn">Get App Deals</a>
+      </div>
+    </section>
+    <!-- end fourth product -->
+
+    <!-- links -->
+    <footer id="footer">
+      <section id="links">
+        <div class="Footer-links">
+          <h2>
+            <a href="#">About us</a>
+          </h2>
+          <ul>
+            <li class="Active-links">
+              <a href="">Our History</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Leadership Team</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Values in Action</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Investor Relations</a>
+            </li>
+            <li class="Active-links">
+              <a href="">News & Notifications</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Franchise Info</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Recalls & Alerts</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Real Estate</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Digital Accessibility</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="Footer-links">
+          <h2>
+            <a href="#">Careers</a>
+          </h2>
+          <ul>
+            <li class="Active-links">
+              <a href="">Careers Page</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Education Opportunities</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Employees perks</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Meet our People:Staff & Management</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Working with us</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Apply now</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="Footer-links">
+          <h2>
+            <a href="#">Services</a>
+          </h2>
+          <ul>
+            <li class="Active-links">
+              <a href="">Wi-Fi</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Arch Card®</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Play Places & Parties</a>
+            </li>
+            <li class="Active-links">
+              <a href="">McDelivery®</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Mobile Order & PAy</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Trending Now</a>
+            </li>
+            <li class="Active-links">
+              <a href="">McDonald's Merchandise</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Family Fun Hub</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="Footer-links">
+          <h2>
+            <a href="#">Community</a>
+          </h2>
+          <ul>
+            <li class="Active-links">
+              <a href="">HACER® Scholarships for Hispanic Students</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Ronald McDonald House Charities</a>
+            </li>
+            <li class="Active-links">
+              <a href="">McDonald's APA</a>
+            </li>
+            <li class="Active-links">
+              <a href="">McDonald’s international</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Black & Positively Golden</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="Footer-links">
+          <h2>
+            <a href="#">Contact Us</a>
+          </h2>
+          <ul>
+            <li class="Active-links">
+              <a href="">Arch Card®</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Donations</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Employement</a>
+            </li>
+            <li class="Active-links">
+              <a href="">restaurant Feedback</a>
+            </li>
+            <li class="Active-links">
+              <a href="">Frequently Asked Questions</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="footer-social-links">
+        <div class="social-links">
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADw0lEQVRoge2YXWibVRjHfydJmzQJ6ZA54/CrfvRKturYOnEpyZCxLisyR8Qr8UpEkKFDJjiqOEF7oe7SS0H8jB1oTcXB2tC0dBOGswqCX9Pa7suBqzZtaJL3eJE0tu7jPCeJ3vj+7t7k/5zn+b/nvM857wsuLi4uLv9nVLMG6u4djgT8OoliO7ARuA1YU/37EvAz6FMKRorlcmbikwf/bEbehg1s25Pp9KIPgHoECArDFpTiPUc5A2ODfd83kr9uA/elPmzzF4OHtFL7AF+dwxSBw6o92J99K1GoZ4C6DPTsHbpLOZ4jwN31xF+B447yPpQ7svOsbaC1gZ69w/coR38OXG8ba2DG8XiSucHeKZsgKwPVOz9B84tfZkb52JxNJ89JA8QG4o+NBvTcwnEqHUbE2usC9GyNsj4axN/qAeDCxQJvf/TDtcJOLvnyscn0w4uSHPKH71L+ZZQSF3//5hvo39+Fv9W76vfvfpwzGdjUWgo/B7wgyeORiLbtyXRWu42IgN/Lgac2XFa8HOeZeCoTlShFM1Dt8+LZurMjQiTcUrsulhzGT5xnPl/kwkVJt1RhXdb9wJNGpUnQ3TscCQT0WeSbFA/E1nPw6a7a9bHcGQ69cUoavlxZvlQq3WjasY1LKODXSSyKB2hrWz1ZC4slm/AKmpDX17LLJDMvi8rZRsStN4Xx+72sWxtY9fua9lY672gHoFAoMz07LxpPwXbgg2tpJOta3Hme37exVuhKYt1RYt2VZ3L8xHkODpyUDaj1BpNE0oU6ZNlkSO9+ldtNAomBiE1GE9OzeRv55dP5D+o9RV6Rx5+dAKBvxy3sf+Lvc97Q0Wlee/ObZqaqIZmBP/6VzDLmTAKJgdNNKKRefjIJBAa05Q7UPBR8ZdIYDSgYaU459mj0MZPGPAO+0KcorFpHU1DklS/0mUlmNJBNJ+YVvN+cqizQ+t1sOmHcNETHaUc5A1RewP8rlsoeXpUIRQaqnz4ON1SSBRpeHx/cbexAYLGRqfZgv55biAFbTdpfZuYZOjpdu5769ndpGkBNhgq8KFZbjEw8lYnqEl8AN9vEyVFnvL7ylpF036w0QrSElsmmk+ccj2c3MGNdm5lftaN32hQPlgYAcoO9U45P3QuM2cZeHTWpfGwZ+zj5tW2ktQGAXHrXb8GC2gHqpQb3iCUUrwQLJGy+Ba2k4Y+78VQmWnkBV4+iCQmz5kG9U1bOgLTbXH2oJhFPjYad8mLSo3XCUXQpTQcrPq9rxWk0X6IZ9bQEhyWblIuLi4uLi4m/AIBwGik7ZCWOAAAAAElFTkSuQmCC"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="data:image/png;base64,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"
+              /></a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADp0lEQVRoge2YTWgdVRiGn2+S9l6SND+NTUpioht3bayL4k6KiJoKGsFA/QHF4Mbqzp0gCiIWXEhFwS5StG60oOKigggqKgpGjQndWZWYlGKb9qa5t15vMt/r4uamaezcOzMxZDPvas6ZOd887znfnHPmQKZMmTJlypQpU2pZmkYXR0c7ti3nBwIPB0P5blzdJnUCnZJyYO24g3S1kTvuLMhUxilgXiDUvAWcDZeC2bBp+0zPlyeLm2KgdP+h+2TBY8CQwaCgDQlJVUgB1MpwzT3Wllmpu86zCMQC0qykicDteNd3n361YQOlkUfekHjmmsrNgb9adoEkwQs3fP/Zy6kNLD7w6EOGTm4BfC2OgpA7dv74+TdRjEEDd09sITxI5uZP1mNsrncTNJQEXhIVd5prPbMx+FqbffUII0dAw8M5oD8uPBJXwmWaD49RuedOimG4CpoeXiC/RXVSPdLA4rbum4EgSdqE7nQevJve556l6/VXKPZ0U3HfALyQ1HZ+/4HexAZMYX/SnF+9BlqG9tB3/C0YHaHkIZ4OHiSCSjiY2EBgakv1wa6Nkc+x6+kxuo4eYbG3m6W1wDHhkQjDoCOxAam6WCWfbf6rllv3MPDuMTj0IEUPUQJ4CQi8PbEBl7emmSojX5TP0XP4KbrffI3i7l0s1bYajeAlTGFyA4GsNSm86hioqWXfXgZOvE3ltr24vCE8Ei5FGqi7DqRapOLIbLWNrY+/Dn6l3qNCRaeQq5RmhW2k0s9TzDw8RvPELwTx4DGpEBUvcgRkKpmn2R5EdEi5zIVj71A+8T6tWHVligFfvbbkBswpptrbXEelyWnOv/gq+blztGANc379dyFPMQLuy0WrreBx4dfxr/b6ex/QtiZWEngkmswWEhsIguY5eZgMfk0KXZmc5q+XjpCfO0crFmu2iXqmXP77z8QGdljxj8vKu6QgLnwg49LHp6ic+Y3KR6dos+oYbgReUuGmmelLUZx1f2gKd43MIAbiwK/kKhUPaRI0QQOwWPAgJvp+ndgfxVj3h0bSVFx4XJjEdux/hBeGT9VjrGsA13hc+DgwSeGR5PLx1Aa6vvjkQ0lHtwoe+fP9Zya/rccY61hl/sDBe032ONLQyjexY5Pga8cqP5gz3vf7T183Ykt1sDV/+3A7cCPB0gBOn7vtNMJORIdQDleHUFA1WB0wCz2U/LKMfxSqEMgXHJsXOmvLzDblijM9p08nPtjKlClTpkyZMmXagP4F7JpNN4u8JocAAAAASUVORK5CYII="
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="data:image/png;base64,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"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAEXElEQVRoge2Yv28cRRSAv7e7ZyM7imMRFIKDTQFGxphIoAihQESTIoKCKOB0gAQKEg0SgsiiwX8BFUFQWIgK5BRIgJIOWyAKN9jBKCHEIsaK5RgTjG2c2Le3MxS7d77d292ZO1+Xe8XtzNy8N9/T/HhvBlrSkpa0pCV3s4h1z9EJr3NheVAC9bArjhM2BrX9goz2eIeaqksAjigdqGurS4uXmRwt2WBZObDnza8GxGcc0Y9XFLQuFypf0fF6pYgOB0rqRHWp0dGzjlbDt7586zcTm2OkH53wGofXDcADMKTEGeeVcXfXDnQuLA9KBV7XCY8dvI7PFoBoPdTtrQ3u2gFHqd44WGyQdPjSFl2ezz6vyD1sgS7lw1ds7tgNB9e9Jj7P1CEOvzPHkjITYVHx7KP7+e7DkwBcvfEPT79/HvFcA3yKXaWNe9TOAWt4jWhF/wP7Kn1dR6IlEu2FDPgdm/GxTGLexAmDNfC6Ch7QQZFTR/sT6g3AazsnLJdQBJjYA9UgAqB8Th7p5ehjPTHNRuGNRxB1zIARvlTkuf5uPnn7eKp+UgeSsxnNZM3xmi9WMxA/aRLwWtNOkbMvH+adl46Ea75KCq5D3/6OmDNbfomVdR+cQpVzVY6V24K8iG7pgBeAkgx4QJe2Gf/gBMeGHkzV7zvQxcy512Nt67e3eei1zxDHS9hMO6HyxWIJVaUkyWUT1fd2tFkNVhlUhLTNKollZCN1xoGwnBpdG5E0eOqzW0ccCAtJeHEcRj7/gQPdnQwc6mbk9DMx1Zurm4yMfR/LGjfuFBFxEjbrh7d3IC+vEY+p+Q3k+hora7cZSWj+d6fIN1PziNdObNm4bfnwWmOTLFvHgfykDBBBKZWiWXY0+tEaoj0Qtxn1rQqK+feKUKziQP0ZZYYTGYdApU8MvmmnUGAHDyidNgPE+jQTHupMJcogWamBUhkDZ8LHg9jOnSP6WtwX69rEpqRMpzggkUZmCp0FbymWuRBGeNGwue3XqB26by/37vEiuCjnUT7a3wIVIJnwTdsDNvDhd/HWBioRRdsLLmPvvkhvl0ub3maop4Ozp57ki/degMDfsZOAFw0E5ocJ8xIqQRhzzBnlZlEzPXeTpx45GDNx7Ik+fv70TKzt0txSPnxTZ8AqHQZxCoxdnLYzWdbbBTzYHqNghC8HqPEf57gwdS3XotKaiZnr0fBZ8E3NhSzgKxYLvPHRRc6cuMGrxw/Td/8+NPD3v5ss/LXG5MwffP3TVeaWNhDXq9jJfhRrhgNW8OUzXvClwLkLv/Lxt9MUXPBLAYIDQngHEEHcggFeJ++bjTqg/yyXzPBV/zku4riUtA4vXqkXlfxHMTdQ8yY64x5YXVq8DMzWBV8GyT1+TS96+tKy13dl1w4wOVpytBoGZrPhdSqIKfBlw/OLctzTnB82pqP2z+vPj3rdPQcHRKl+lOOYntDdeDVZSNURjRJHfl9eWb9i+7zekpa0pCUtubvlfw4C2gR4LYYHAAAAAElFTkSuQmCC"
+              /></a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="data:image/png;base64,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"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="app-links">
+          <ul>
+            <li>
+              <a href="#">
+                <img src="./images/App store img.png" alt="img" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/google play img.png" alt="img" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <hr />
+    </footer>
+
+    <section id="legal">
+      <div class="links">
+        <ul class="legal-links">
+          <li class="active-legal-links">
+            <a href="">Privacy (Updated)</a>
+          </li>
+          <li class="active-legal-links">
+            <a href="">Terms & conditions</a>
+          </li>
+          <li class="active-legal-links">
+            <a href="">Accessibility</a>
+          </li>
+          <li class="active-legal-links">
+            <a href="">Do Not Sell My Personal Information</a>
+          </li>
+          <li class="active-legal-links">
+            <a href="">Cookie Settings</a>
+          </li>
+        </ul>
+        <ul>
+          <div class="copyright">
+            <img
+              src="./images/copyright McD logo.jpg"
+              class="copyright-mcg-logo"
+              alt=""
+            />
+            <p>© 2017 - 2021&nbsp;McDonald's. All Rights Reserved</p>
+          </div>
+        </ul>
+      </div>
+    </section>
+    <!-- end links -->
+  </body>
+</html>
